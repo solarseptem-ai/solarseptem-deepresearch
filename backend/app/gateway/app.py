@@ -11,12 +11,17 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-import logging
+import os
+import asyncio
 from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
 
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+from app.gateway.middlewares.auth_middleware import AuthMiddleware
+from app.gateway.middlewares.csrf_middleware import CSRFMiddleware
 from app.gateway.config import get_gateway_config
 from app.gateway.deps import langgraph_runtime
 from app.gateway.routers import (
@@ -34,16 +39,9 @@ from app.gateway.routers import (
     threads,
     uploads,
 )
-from deerflow.config.app_config import get_app_config
+from solarseptem_deepresearch.config.app_config import get_app_config
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
-
-logger = logging.getLogger(__name__)
+from solarseptem_deepresearch.utils.logger import logger
 
 
 @asynccontextmanager

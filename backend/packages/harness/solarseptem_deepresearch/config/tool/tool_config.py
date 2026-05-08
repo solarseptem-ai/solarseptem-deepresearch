@@ -21,6 +21,6 @@ class ToolConfig(BaseModel):
     group: str = Field(..., description="Group name for the tool")
     use: str = Field(
         ...,
-        description="Variable name of the tool provider(e.g. deerflow.sandbox.tools:bash_tool)",
+        description="Variable name of the tool provider(e.g. solarseptem_deepresearch.sandbox.tools:bash_tool)",
     )
     model_config = ConfigDict(extra="allow")

@@ -14,7 +14,7 @@
 import json
 from langchain.tools import tool
 
-from solarseptem_deepresearch.config import (get_app_config)
+from solarseptem_deepresearch.config import get_app_config
 
 from solarseptem_deepresearch.utils import logger
 

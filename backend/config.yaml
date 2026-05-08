@@ -267,7 +267,7 @@ tools:
   # Web search tool (uses DuckDuckGo, no API key required)
   - name: web_search
     group: web
-    use: solarseptem_deepresearch.community.ddg_search.tools:web_search_tool
+    use: solarseptem_deepresearch.community.tavily.tools:web_search_tool
     max_results: 5
 
   # Web search tool (requires Tavily API key)

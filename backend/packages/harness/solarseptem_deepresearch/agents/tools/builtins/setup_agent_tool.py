@@ -11,8 +11,6 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-import logging
-
 import yaml
 from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
@@ -66,7 +64,6 @@ def setup_agent(
 
     except Exception as e:
         import shutil
-
         if agent_name and agent_dir.exists():
             # Cleanup the custom agent directory only if it was created but an error occurred during setup
             shutil.rmtree(agent_dir)

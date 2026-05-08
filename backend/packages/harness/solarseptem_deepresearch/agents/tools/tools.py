@@ -40,7 +40,7 @@ def _is_host_bash_tool(tool: object) -> bool:
     use = getattr(tool, "use", None)
     if group == "bash":
         return True
-    if use == "deerflow.sandbox.tools:bash_tool":
+    if use == "solarseptem_deepresearch.sandbox.tools:bash_tool":
         return True
     return False
 
@@ -54,7 +54,7 @@ def get_available_tools(
     """Get all available tools from config.
 
     Note: MCP tools should be initialized at application startup using
-    `initialize_mcp_tools()` from deerflow.mcp module.
+    `initialize_mcp_tools()` from solarseptem_deepresearch.mcp module.
 
     Args:
         groups: Optional list of tool groups to filter by.
@@ -66,6 +66,7 @@ def get_available_tools(
         List of available tools.
     """
     config = get_app_config()
+    # groups is None  ，load config tool
     tool_configs = [tool for tool in config.tools if groups is None or tool.group in groups]
 
     # Do not expose host bash by default when LocalSandboxProvider is active.
@@ -102,8 +103,8 @@ def get_available_tools(
     reset_deferred_registry()
     if include_mcp:
         try:
-            from deerflow.config.extensions_config import ExtensionsConfig
-            from deerflow.mcp.cache import get_cached_mcp_tools
+            from solarseptem_deepresearch.config.extensions import ExtensionsConfig
+            from solarseptem_deepresearch.mcp.cache import get_cached_mcp_tools
 
             extensions_config = ExtensionsConfig.from_file()
             if extensions_config.get_enabled_mcp_servers():
@@ -114,8 +115,8 @@ def get_available_tools(
                     # When tool_search is enabled, register MCP tools in the
                     # deferred registry and add tool_search to builtin tools.
                     if config.tool_search.enabled:
-                        from deerflow.tools.builtins.tool_search import DeferredToolRegistry, set_deferred_registry
-                        from deerflow.tools.builtins.tool_search import tool_search as tool_search_tool
+                        from solarseptem_deepresearch.tools.builtins.tool_search import DeferredToolRegistry, set_deferred_registry
+                        from solarseptem_deepresearch.tools.builtins.tool_search import tool_search as tool_search_tool
 
                         registry = DeferredToolRegistry()
                         for t in mcp_tools:

@@ -29,7 +29,6 @@ internal checkpoint callbacks that are not exposed in the Python public API.
 from __future__ import annotations
 
 import asyncio
-import logging
 from typing import Any, Literal
 
 from solarseptem_deepresearch.runtime.serialization import serialize
