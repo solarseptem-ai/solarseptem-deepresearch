@@ -212,7 +212,7 @@ models:
      display_name: qwen3.5-flash-2026-02-23
      use: solarseptem_deepresearch.models.patched_finna:PatchedFinnaAI
      model: qwen3.5-flash-2026-02-23
-     api_key: app-MnARVbvl48dnCz5JPVwuHTku
+     api_key: XXX
      base_url: https://www.finna.com.cn/v1
      max_tokens: 4096
      supports_thinking: true
