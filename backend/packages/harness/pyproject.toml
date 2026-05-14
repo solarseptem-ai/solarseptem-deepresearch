@@ -37,7 +37,9 @@ dependencies = [
     "orjson",
     "structlog",
     "platformdirs",
-    "jinja2"
+    "jinja2",
+    "shortuuid>=1.0.13",
+    "json-repair>=0.59.8"
 ]
 
 [build-system]

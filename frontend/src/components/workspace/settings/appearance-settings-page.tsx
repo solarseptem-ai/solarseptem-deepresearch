@@ -31,12 +31,6 @@ export function AppearanceSettingsPage() {
   const themeOptions = useMemo(
     () => [
       {
-        id: "system",
-        label: t.settings.appearance.system,
-        description: t.settings.appearance.systemDescription,
-        icon: MonitorSmartphoneIcon,
-      },
-      {
         id: "light",
         label: t.settings.appearance.light,
         description: t.settings.appearance.lightDescription,
@@ -47,6 +41,12 @@ export function AppearanceSettingsPage() {
         label: t.settings.appearance.dark,
         description: t.settings.appearance.darkDescription,
         icon: MoonIcon,
+      },
+        {
+        id: "system",
+        label: t.settings.appearance.system,
+        description: t.settings.appearance.systemDescription,
+        icon: MonitorSmartphoneIcon,
       },
     ],
     [

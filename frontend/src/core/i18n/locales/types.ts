@@ -252,6 +252,7 @@ export interface Translations {
     sections: {
       appearance: string;
       memory: string;
+      models: string;
       tools: string;
       skills: string;
       notification: string;
@@ -341,6 +342,20 @@ export interface Translations {
       darkDescription: string;
       languageTitle: string;
       languageDescription: string;
+    };
+    models: {
+      title: string;
+      description: string;
+      localModels: string;
+      remoteModels: string;
+      supportsThinking: string;
+      supportsReasoning: string;
+      addModel: string;
+      defaultModel: string;
+      defaultModelDescription: string;
+      selectModel: string;
+      empty: string;
+      loadError: string;
     };
     tools: {
       title: string;

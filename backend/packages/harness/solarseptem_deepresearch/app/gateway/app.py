@@ -15,11 +15,13 @@ from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from solarseptem_deepresearch.utils import logger
 from solarseptem_deepresearch.app.gateway.config import get_gateway_config
 from solarseptem_deepresearch.app.gateway.deps import langgraph_runtime
 from solarseptem_deepresearch.app.gateway.routers import (
+    agents,
     mcp,
     models,
     skills,
@@ -112,6 +114,10 @@ This gateway provides custom endpoints for models, MCP configuration, skills, an
                 "description": "Operations for querying available AI models and their configurations",
             },
             {
+                "name": "agents",
+                "description": "Create and manage custom agents with per-agent config and prompts",
+            },
+            {
                 "name": "mcp",
                 "description": "Manage Model Context Protocol (MCP) server configurations",
             },
@@ -140,10 +146,20 @@ This gateway provides custom endpoints for models, MCP configuration, skills, an
     )
 
     # CORS is handled by nginx - no need for FastAPI middleware
-
+    # 直接开跨域
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],  # 允许所有前端
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
     # Include routers
     # Models API is mounted at /api/models
     app.include_router(models.router)
+
+    # Agents API is mounted at /api/agents
+    app.include_router(agents.router)
 
     # MCP API is mounted at /api/mcp
     app.include_router(mcp.router)

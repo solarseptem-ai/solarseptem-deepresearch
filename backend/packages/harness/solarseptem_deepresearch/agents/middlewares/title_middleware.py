@@ -12,8 +12,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 """Middleware for automatic thread title generation."""
-
-import logging
 from typing import NotRequired, override
 
 from langchain.agents import AgentState

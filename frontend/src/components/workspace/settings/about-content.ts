@@ -2,66 +2,32 @@
  * About DeerFlow markdown content. Inlined to avoid raw-loader dependency
  * (Turbopack cannot resolve raw-loader for .md imports).
  */
-export const aboutMarkdown = `# 🦌 [About DeerFlow 2.0](https://github.com/bytedance/deer-flow)
+export const aboutMarkdown = `### 关于 SolarSeptem 2.0
+源于开源，回馈开源
+SolarSeptem（全称 **S**mart **O**riginate **L**ogic **A**gent **R**esearch Septem）是一个社区驱动的超级智能代理编排框架，具备自主调研、代码编写与内容创作能力。依托沙箱环境、持久化记忆、工具调用与技能编排能力，可处理从分钟级到小时级的各类复杂任务。
+****
+🌟 GitHub 代码仓库
+SolarSeptem GitHub 开源地址：https://github.com/solarseptem-ai/solarseptem-deepresearch
+****
+🌐 官方网站
+访问 SolarSeptem 官方网站：solarseptem.ai
+****
+📧 技术支持
+如有任何问题或需要协助，可联系官方邮箱：sonhhxg0529@163.com
+****
+📜 开源协议
+SolarSeptem 秉持开源精神，基于 MIT 开源协议 进行分发与使用。
+****
+🙌 致谢
+由衷感谢所有为 SolarSeptem 落地做出贡献的开源项目与开发者，我们始终站在开源巨人的肩膀上前行。
+****
+核心依赖框架
+- LangChain：支撑大模型交互与任务链路编排的核心基础框架。
+- LangGraph：实现多智能代理复杂流程编排与状态流转的关键能力底座。
+- Next.js：现代化全栈 Web 应用开发框架，支撑前后端一体化架构。
+- UI 组件库
+- Shadcn：极简高质量组件库，作为系统前端 UI 基础。
+- SToneX：为逐字流式渲染、动态可视化交互效果提供重要技术贡献。
 
-> **From Open Source, Back to Open Source**
-
-DeerFlow (**D**eep **E**xploration and **E**fficient **R**esearch **Flow**) is an open-source **super agent harness** that orchestrates **sub-agents**, **memory**, and **sandboxes** to do almost anything — powered by **extensible skills**.
-
----
-
-## 🚀 Core Features
-
-* **Skills & Tools**: With built-in and extensible skills and tools, DeerFlow can do almost anything.
-* **Sub-Agents**: Sub-Agents help the main agent to do the tasks that are too complex to be done by the main agent.
-* **Sandbox & File System**: Safely execute code and manipulate files in the sandbox.
-* **Context Engineering**: Isolated sub-agent context, summarization to keep the context window sharp.
-* **Long-Term Memory**: Keep recording the user's profile, top of mind, and conversation history.
-
----
-
-## 🌟 GitHub Repository
-
-![Star History Chart](https://api.star-history.com/svg?repos=bytedance/deer-flow&type=Date)
-
-Explore DeerFlow on GitHub: [github.com/bytedance/deer-flow](https://github.com/bytedance/deer-flow)
-
-## 🌐 Official Website
-
-Visit the official website of DeerFlow: [deerflow.tech](https://deerflow.tech/)
-
-## 📧 Support
-
-If you have any questions or need help, please contact us at [support@deerflow.tech](mailto:support@deerflow.tech).
-
----
-
-## 📜 License
-
-DeerFlow is proudly open source and distributed under the **MIT License**.
-
----
-
-## 🙌 Acknowledgments
-
-We extend our heartfelt gratitude to the open source projects and contributors who have made DeerFlow a reality. We truly stand on the shoulders of giants.
-
-### Core Frameworks
-- **[LangChain](https://github.com/langchain-ai/langchain)**: A phenomenal framework that powers our LLM interactions and chains.
-- **[LangGraph](https://github.com/langchain-ai/langgraph)**: Enabling sophisticated multi-agent orchestration.
-- **[Next.js](https://nextjs.org/)**: A cutting-edge framework for building web applications.
-
-### UI Libraries
-- **[Shadcn](https://ui.shadcn.com/)**: Minimalistic components that power our UI.
-- **[SToneX](https://github.com/stonexer)**: For his invaluable contribution to token-by-token visual effects.
-
-These outstanding projects form the backbone of DeerFlow and exemplify the transformative power of open source collaboration.
-
-### Special Thanks
-Finally, we want to express our heartfelt gratitude to the core authors of DeerFlow 1.0 and 2.0:
-
-- **[Daniel Walnut](https://github.com/hetaoBackend/)**
-- **[Henry Li](https://github.com/magiccube/)**
-
-Without their vision, passion and dedication, \`DeerFlow\` would not be what it is today.
+以上优秀开源项目共同构成了 SolarSeptem 的技术基石，诠释了开源协作的价值与力量。
 `;

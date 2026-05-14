@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { loadModels } from "./api";
+import { loadModels, loadProviders } from "./api";
+import type { Provider } from "./types";
 
 export function useModels({ enabled = true }: { enabled?: boolean } = {}) {
   const { data, isLoading, error } = useQuery({
@@ -10,4 +11,14 @@ export function useModels({ enabled = true }: { enabled?: boolean } = {}) {
     refetchOnWindowFocus: false,
   });
   return { models: data ?? [], isLoading, error };
+}
+
+export function useProviders({ enabled = true }: { enabled?: boolean } = {}) {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["providers"],
+    queryFn: () => loadProviders(),
+    enabled,
+    refetchOnWindowFocus: false,
+  });
+  return { providers: data ?? [], isLoading, error };
 }

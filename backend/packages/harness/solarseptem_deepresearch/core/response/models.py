@@ -29,3 +29,11 @@ class ModelsListResponse(BaseModel):
     """Response model for listing all models."""
 
     models: list[ModelResponse]
+
+
+
+
+class ActiveModelsResponse(BaseModel):
+    """Response model for listing all models."""
+
+    models: list[ModelResponse]

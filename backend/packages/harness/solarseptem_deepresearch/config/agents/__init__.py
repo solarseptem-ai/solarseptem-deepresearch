@@ -11,7 +11,7 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-from .agent_config import AgentConfig,load_agent_config,AGENT_NAME_PATTERN,load_agent_soul,AGENT_LLM_MAP
+from .agent_config import AgentConfig,load_agent_config,AGENT_NAME_PATTERN,load_agent_soul,AGENT_LLM_MAP,list_custom_agents
 from .skills_config import SkillsConfig
 from .checkpointer_config import CheckpointerConfig,get_checkpointer_config,load_checkpointer_config_from_dict
 from .subagents_config import SubagentConfig,get_subagents_app_config,load_subagents_config_from_dict
@@ -21,6 +21,7 @@ __all__ = [
     "AgentConfig",
     "AGENT_NAME_PATTERN",
     "AGENT_LLM_MAP",
+    "list_custom_agents",
     "SkillsConfig",
     "CheckpointerConfig",
     "SubagentConfig",

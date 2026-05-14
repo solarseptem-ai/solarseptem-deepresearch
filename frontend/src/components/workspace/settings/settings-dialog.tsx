@@ -2,8 +2,9 @@
 
 import {
   BellIcon,
-  InfoIcon,
   BrainIcon,
+  BoxIcon,
+  InfoIcon,
   PaletteIcon,
   SparklesIcon,
   WrenchIcon,
@@ -76,6 +77,7 @@ export function SettingsDialog(props: SettingsDialogProps) {
     [
       t.settings.sections.appearance,
       t.settings.sections.memory,
+      t.settings.sections.models,
       t.settings.sections.tools,
       t.settings.sections.skills,
       t.settings.sections.notification,

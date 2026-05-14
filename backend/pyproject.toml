@@ -16,6 +16,7 @@ dependencies = [
     "python-telegram-bot>=21.0",
     "langgraph-sdk>=0.1.51",
     "markdown-to-mrkdwn>=0.3.1",
+    "shortuuid>=1.0.13"
 ]
 
 [dependency-groups]

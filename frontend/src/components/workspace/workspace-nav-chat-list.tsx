@@ -1,6 +1,6 @@
 "use client";
 
-import { BotIcon, MessagesSquare } from "lucide-react";
+import { BotIcon, BlocksIcon, BoxIcon, MessagesSquare, GitBranchIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -15,6 +15,7 @@ import { useI18n } from "@/core/i18n/hooks";
 export function WorkspaceNavChatList() {
   const { t } = useI18n();
   const pathname = usePathname();
+
   return (
     <SidebarGroup className="pt-1">
       <SidebarMenu>
@@ -34,6 +35,39 @@ export function WorkspaceNavChatList() {
             <Link className="text-muted-foreground" href="/workspace/agents">
               <BotIcon />
               <span>{t.sidebar.agents}</span>
+            </Link>
+          </SidebarMenuButton>
+        </SidebarMenuItem>
+        <SidebarMenuItem>
+          <SidebarMenuButton
+            isActive={pathname.startsWith("/workspace/workflows")}
+            asChild
+          >
+            <Link className="text-muted-foreground" href="/workspace/workflows">
+              <GitBranchIcon />
+              <span>工作流</span>
+            </Link>
+          </SidebarMenuButton>
+        </SidebarMenuItem>
+        <SidebarMenuItem>
+          <SidebarMenuButton
+            isActive={pathname.startsWith("/workspace/mcp")}
+            asChild
+          >
+            <Link className="text-muted-foreground" href="/workspace/mcp">
+              <BlocksIcon />
+              <span>{t.sidebar.mcp}</span>
+            </Link>
+          </SidebarMenuButton>
+        </SidebarMenuItem>
+        <SidebarMenuItem>
+          <SidebarMenuButton
+            isActive={pathname.startsWith("/workspace/models")}
+            asChild
+          >
+            <Link className="text-muted-foreground" href="/workspace/models">
+              <BoxIcon />
+              <span>{t.sidebar.models}</span>
             </Link>
           </SidebarMenuButton>
         </SidebarMenuItem>

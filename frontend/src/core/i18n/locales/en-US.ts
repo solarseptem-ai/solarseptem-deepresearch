@@ -172,6 +172,8 @@ export const enUS: Translations = {
     recentChats: "Recent chats",
     demoChats: "Demo chats",
     agents: "Agents",
+    mcp: "MCP",
+    models: "Models",
   },
 
   // Agents
@@ -322,6 +324,7 @@ export const enUS: Translations = {
     sections: {
       appearance: "Appearance",
       memory: "Memory",
+      models: "Models",
       tools: "Tools",
       skills: "Skills",
       notification: "Notification",
@@ -419,6 +422,24 @@ export const enUS: Translations = {
       languageTitle: "Language",
       languageDescription: "Switch between languages.",
     },
+    models: {
+      title: "Models",
+      description: "Manage available AI models, including local and remote models.",
+      localModels: "Local Models",
+      remoteModels: "Remote Models",
+      supportsThinking: "Supports Thinking",
+      supportsReasoning: "Supports Reasoning",
+      addModel: "Add Model",
+      provider:"Provider",
+      addProvider:"Add Provider",
+      searchProvider:"Search provider...",
+      search:"Search",
+      defaultModel: "Default Model",
+      defaultModelDescription: "Select the default AI model to use.",
+      selectModel: "Select model",
+      empty: "No models configured yet.",
+      loadError: "Failed to load model list.",
+    },
     tools: {
       title: "Tools",
       description: "Manage the configuration and enabled status of MCP tools.",
@@ -449,6 +470,26 @@ export const enUS: Translations = {
     acknowledge: {
       emptyTitle: "Acknowledgements",
       emptyDescription: "Credits and acknowledgements will show here.",
+    },
+    mcp: {
+      title: "MCP",
+      description: "Create and manage MCP (Model Context Protocol) clients to extend agent capabilities.",
+      serverEnabled: "Server enabled",
+      serverDisabled: "Server disabled",
+      enabled: "Enabled",
+      disabled: "Disabled",
+      loadError: "Failed to load MCP configuration",
+      emptyTitle: "No MCP clients yet",
+      emptyDescription: "Create your first MCP client to extend agent capabilities.",
+      newClient: "New Client",
+      create:"create",
+      cancel:"cancel",
+      noDescription: "No description",
+      documentation: "Documentation",
+      documentationDescription: "Learn more about MCP",
+      documentationText:
+        "Model Context Protocol (MCP) is an open protocol that enables standardized connections between AI assistants and external data sources and tools.",
+      learnMore: "Learn More",
     },
   },
 };

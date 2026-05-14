@@ -11,17 +11,16 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-import logging
-
 from langchain.tools import BaseTool
 
+from solarseptem_deepresearch.utils.logger import logger
 from solarseptem_deepresearch.config import get_app_config
 from solarseptem_deepresearch.utils.reflection import resolve_variable
 from solarseptem_deepresearch.sandbox.security import is_host_bash_allowed
 from solarseptem_deepresearch.agents.tools.builtins import ask_clarification_tool, present_file_tool, task_tool, view_image_tool
 from solarseptem_deepresearch.agents.tools.builtins.tool_search import reset_deferred_registry
 
-logger = logging.getLogger(__name__)
+
 
 BUILTIN_TOOLS = [
     present_file_tool,

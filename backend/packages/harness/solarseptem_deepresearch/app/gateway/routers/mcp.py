@@ -12,9 +12,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 import json
-import logging
 from pathlib import Path
-from typing import Literal
 
 from fastapi import APIRouter, HTTPException
 from solarseptem_deepresearch.utils import logger
